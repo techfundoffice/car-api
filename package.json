@@ -1,6 +1,6 @@
 {
   "name": "auto-parts-db",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "description": "Comprehensive automotive database: 100+ car brands, 2000+ models with generations (1968-present), and 1200+ auto parts. Perfect for dealerships, e-commerce, catalogs, and automotive apps.",
   "keywords": [
     "auto-parts",
@@ -41,13 +41,28 @@
       "import": "./dist/esm/index.js",
       "require": "./dist/cjs/index.js"
     },
+    "./ai": {
+      "types": "./dist/types/ai/index.d.ts",
+      "import": "./dist/esm/ai/index.js",
+      "require": "./dist/cjs/ai/index.js"
+    },
+    "./mcp": {
+      "types": "./dist/types/mcp/server.d.ts",
+      "import": "./dist/esm/mcp/server.js",
+      "require": "./dist/cjs/mcp/server.js"
+    },
+    "./embeddings.json": "./embeddings.json",
     "./browser": "./dist/browser/auto-parts-db.min.js"
   },
   "browser": "./dist/browser/auto-parts-db.min.js",
   "main": "./dist/cjs/index.js",
   "types": "./dist/types/index.d.ts",
+  "bin": {
+    "auto-parts-mcp": "./dist/cjs/mcp/bin.js"
+  },
   "files": [
-    "dist"
+    "dist",
+    "embeddings.json"
   ],
   "scripts": {
     "build": "npm run build:esm && npm run build:cjs && npm run build:types && npm run build:browser",
@@ -55,9 +70,27 @@
     "build:cjs": "tsc --project tsconfig.cjs.json",
     "build:types": "tsc --project tsconfig.types.json",
     "prepublishOnly": "npm run build",
-    "build:browser": "esbuild src/index.ts --bundle --format=iife --global-name=AutoPartsDB --outfile=dist/browser/auto-parts-db.min.js --minify"
+    "build:browser": "esbuild src/index.ts --bundle --format=iife --global-name=AutoPartsDB --outfile=dist/browser/auto-parts-db.min.js --minify",
+    "build:embeddings": "node scripts/build-embeddings.mjs",
+    "test": "npm run build:cjs && node --test \"test/*.test.js\"",
+    "mcp": "node dist/cjs/mcp/bin.js"
+  },
+  "peerDependencies": {
+    "@anthropic-ai/sdk": ">=0.60.0",
+    "@modelcontextprotocol/sdk": ">=1.0.0"
+  },
+  "peerDependenciesMeta": {
+    "@anthropic-ai/sdk": {
+      "optional": true
+    },
+    "@modelcontextprotocol/sdk": {
+      "optional": true
+    }
   },
   "devDependencies": {
+    "@anthropic-ai/sdk": "^0.115.0",
+    "@modelcontextprotocol/sdk": "^1.30.0",
+    "@types/node": "^22.0.0",
     "esbuild": "^0.27.3",
     "typescript": "^5.0.0"
   },
