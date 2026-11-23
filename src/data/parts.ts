@@ -293,10 +293,6 @@ export const parts = [
     "name": "Блок мультимедиа"
   },
   {
-    "slug": "multimedia-module",
-    "name": "Блок мультимедиа"
-  },
-  {
     "slug": "navigation-module",
     "name": "Блок навигации"
   },
@@ -1897,10 +1893,6 @@ export const parts = [
     "name": "Коромысло клапана (рокер)"
   },
   {
-    "slug": "rocker-arm",
-    "name": "Коромысло клапана (рокер)"
-  },
-  {
     "slug": "hub-flange",
     "name": "Корона ступицы (фланец ступицы)"
   },
@@ -2073,7 +2065,7 @@ export const parts = [
     "name": "Кронштейн (крепление) двигателя (лапа крепления)"
   },
   {
-    "slug": "rear-bumper-bracket",
+    "slug": "rear-bumper-mount",
     "name": "Кронштейн (крепление) заднего бампера"
   },
   {
@@ -2681,7 +2673,7 @@ export const parts = [
     "name": "Моторчик изменения фаз VVT"
   },
   {
-    "slug": "sunroof-motor",
+    "slug": "hatch-motor",
     "name": "Моторчик люка"
   },
   {
@@ -4981,10 +4973,6 @@ export const parts = [
     "name": "Стойка стабилизатора передняя"
   },
   {
-    "slug": "front-sway-bar-link",
-    "name": "Стойка стабилизатора передняя"
-  },
-  {
     "slug": "fold-out-table",
     "name": "Столик съемный"
   },
@@ -5173,7 +5161,7 @@ export const parts = [
     "name": "триботехнический состав &quot;супротек редуктор&quot;"
   },
   {
-    "slug": "injection-pump-additive",
+    "slug": "injection-pump-additive-standard",
     "name": "триботехнический состав &quot;тнвд&quot;"
   },
   {
@@ -5233,7 +5221,7 @@ export const parts = [
     "name": "Трос управления оборотами двигателя (трос подсоса)"
   },
   {
-    "slug": "front-exhaust-pipe",
+    "slug": "muffler-intake-pipe",
     "name": "Труба приемная глушителя"
   },
   {
@@ -5317,7 +5305,7 @@ export const parts = [
     "name": "Трубка цилиндра сцепления"
   },
   {
-    "slug": "turbocharger",
+    "slug": "turbine",
     "name": "Турбина"
   },
   {
@@ -5849,7 +5837,7 @@ export const parts = [
     "name": "Электронная плата АКПП"
   },
   {
-    "slug": "electric-power-steering",
+    "slug": "electric-power-steering-unit",
     "name": "Электроусилитель руля"
   },
   {
