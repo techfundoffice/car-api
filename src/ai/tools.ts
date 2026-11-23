@@ -19,7 +19,7 @@ import {
   getPartBySlug,
   searchParts,
   getParts,
-} from "../index";
+} from "../index.js";
 
 /** JSON Schema for a tool's input. Kept loose so it can be handed to any consumer. */
 export type JSONSchema = {

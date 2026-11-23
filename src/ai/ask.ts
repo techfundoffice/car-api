@@ -10,7 +10,7 @@
  * database stays dependency-free for consumers who never call this.
  */
 
-import { autoPartsTools, executeAutoPartsTool } from "./tools";
+import { autoPartsTools, executeAutoPartsTool } from "./tools.js";
 
 /** Default model. Opus 5 handles the multi-step lookups these questions need. */
 export const DEFAULT_MODEL = "claude-opus-5";

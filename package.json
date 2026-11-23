@@ -66,13 +66,14 @@
   ],
   "scripts": {
     "build": "npm run build:esm && npm run build:cjs && npm run build:types && npm run build:browser",
-    "build:esm": "tsc --project tsconfig.esm.json",
+    "build:esm": "tsc --project tsconfig.esm.json && node scripts/write-esm-package-json.mjs",
     "build:cjs": "tsc --project tsconfig.cjs.json",
     "build:types": "tsc --project tsconfig.types.json",
     "prepublishOnly": "npm run build",
     "build:browser": "esbuild src/index.ts --bundle --format=iife --global-name=AutoPartsDB --outfile=dist/browser/auto-parts-db.min.js --minify",
     "build:embeddings": "node scripts/build-embeddings.mjs",
-    "test": "npm run build:cjs && node --test \"test/*.test.js\"",
+    "verify:packaging": "node scripts/verify-packaging.mjs",
+    "test": "npm run build && npm run verify:packaging && node --test \"test/*.test.js\"",
     "mcp": "node dist/cjs/mcp/bin.js"
   },
   "peerDependencies": {

@@ -11,7 +11,7 @@
  * the core database never pulls it in.
  */
 
-import { autoPartsToolRegistry, executeAutoPartsTool } from "../ai/tools";
+import { autoPartsToolRegistry, executeAutoPartsTool } from "../ai/tools.js";
 
 /**
  * Specifiers are held in variables so the TypeScript compiler does not try to

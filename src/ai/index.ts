@@ -10,11 +10,11 @@ export {
   autoPartsToolRegistry,
   executeAutoPartsTool,
   getAutoPartsTool,
-} from "./tools";
-export type { ToolDefinition, JSONSchema } from "./tools";
+} from "./tools.js";
+export type { ToolDefinition, JSONSchema } from "./tools.js";
 
-export { askVehicle, DEFAULT_MODEL } from "./ask";
-export type { AskVehicleOptions, AskVehicleResult } from "./ask";
+export { askVehicle, DEFAULT_MODEL } from "./ask.js";
+export type { AskVehicleOptions, AskVehicleResult } from "./ask.js";
 
 export {
   semanticSearchParts,
@@ -26,10 +26,10 @@ export {
   quantize,
   encodeBase64,
   decodeBase64,
-} from "./semantic";
+} from "./semantic.js";
 export type {
   EmbeddingIndex,
   EmbeddingProvider,
   SemanticSearchOptions,
   SemanticSearchResult,
-} from "./semantic";
+} from "./semantic.js";

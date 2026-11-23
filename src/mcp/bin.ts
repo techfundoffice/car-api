@@ -6,7 +6,7 @@
  * diagnostics go to stderr, which clients surface as server logs.
  */
 
-import { startAutoPartsMcpServer } from "./server";
+import { startAutoPartsMcpServer } from "./server.js";
 
 startAutoPartsMcpServer().then(
   () => {

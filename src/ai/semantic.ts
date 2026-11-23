@@ -11,8 +11,8 @@
  * build step and an ad-hoc query embedding do.
  */
 
-import type { Part } from "../data/parts";
-import { getPartBySlug } from "../index";
+import type { Part } from "../data/parts.js";
+import { getPartBySlug } from "../index.js";
 
 /**
  * Turns text into vectors. Any embedding backend can satisfy this — the two
